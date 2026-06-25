@@ -1,9 +1,15 @@
+/* ==========================================================================
+   Global reset — removes default browser spacing on all elements
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ==========================================================================
+   Page layout — centers the pricing cards on a warm off-white canvas
+   ========================================================================== */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +20,9 @@ body {
     padding: 20px;
 }
 
+/* ==========================================================================
+   Cards row — horizontal layout for the pricing plan cards
+   ========================================================================== */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +32,9 @@ body {
     align-items: flex-start;
 }
 
+/* ==========================================================================
+   Card shell — single plan card (320px wide, warm gray background)
+   ========================================================================== */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +46,17 @@ body {
     flex-shrink: 0;
 }
 
+/* Top section — title, price, and feature list (grows to fill card) */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* ==========================================================================
+   Typography — plan name and pricing
+   ========================================================================== */
+
+/* Plan title — e.g. "Hobby", "Pro" */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +65,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row — holds amount and billing period */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +73,42 @@ body {
     align-items: baseline;
 }
 
+/* Price value — e.g. "Free" or "$20" */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Billing period — e.g. "/mo." */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* ==========================================================================
+   Feature list — "Includes:" label and bullet items
+   ========================================================================== */
+
+/* Spacing between price block and feature list */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* Muted intro line — "Includes:" or "Everything in Hobby, plus:" */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Unstyled list — checkmarks replace default bullets */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Single feature row — checkmark icon + text */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +117,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon before each feature */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +125,11 @@ body {
     font-weight: 400;
 }
 
+/* ==========================================================================
+   Buttons — pill-shaped CTAs pinned to the bottom of each card
+   ========================================================================== */
+
+/* Default (secondary) — light gray pill */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -117,6 +152,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary variant — dark filled pill for main action */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +166,9 @@ body {
     background-color: #333;
 }
 
+/* ==========================================================================
+   Version badge — fixed label at top of page (HTML vs JSX indicator)
+   ========================================================================== */
 .page-label {
     position: fixed;
     top: 16px;
